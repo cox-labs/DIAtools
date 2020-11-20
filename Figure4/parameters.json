@@ -3,27 +3,27 @@
     "ML" : {
         "libraryDIA" : {
             "PSM100_PROTEIN100" : {
-                "evidence": "W:\\pavel_test\\27HepG2\\results\\40021621\\ML\\libraryDIA\\PSM100_PROTEIN100\\txt\\evidence.txt",
-                "peptides": "W:\\pavel_test\\27HepG2\\results\\40021621\\ML\\libraryDIA\\PSM100_PROTEIN100\\txt\\peptides.txt",
-                "proteinGroups": "W:\\pavel_test\\27HepG2\\results\\40021621\\ML\\libraryDIA\\PSM100_PROTEIN100\\txt\\proteinGroups.txt"
+                "evidence": "<folder>\\evidence.txt",
+                "peptides": "<folder>\\peptides.txt",
+                "proteinGroups": "<folder>\\proteinGroups.txt"
             },
             "PSM001_PROTEIN100" : {
-                "evidence": "W:\\pavel_test\\27HepG2\\results\\40021621\\ML\\libraryDIA\\PSM001_PROTEIN100\\txt\\evidence.txt",
-                "peptides": "W:\\pavel_test\\27HepG2\\results\\40021621\\ML\\libraryDIA\\PSM001_PROTEIN100\\txt\\peptides.txt",
-                "proteinGroups": "W:\\pavel_test\\27HepG2\\results\\40021621\\ML\\libraryDIA\\PSM001_PROTEIN100\\txt\\proteinGroups.txt"
+                "evidence": "<folder>\\evidence.txt",
+                "peptides": "<folder>\\peptides.txt",
+                "proteinGroups": "<folder>\\proteinGroups.txt"
 
             }
         },
         "discoveryDIA" : {
             "PSM100_PROTEIN100" : {
-                "evidence": "W:\\pavel_test\\27HepG2\\results\\40021621\\ML\\discoveryDIA\\PSM100_PROTEIN100\\txt\\evidence.txt",
-                "peptides": "W:\\pavel_test\\27HepG2\\results\\40021621\\ML\\discoveryDIA\\PSM100_PROTEIN100\\txt\\peptides.txt",
-                "proteinGroups": "W:\\pavel_test\\27HepG2\\results\\40021621\\ML\\discoveryDIA\\PSM100_PROTEIN100\\txt\\proteinGroups.txt"
+                "evidence": "<folder>\\evidence.txt",
+                "peptides": "<folder>\\peptides.txt",
+                "proteinGroups": "<folder>\\proteinGroups.txt"
             },
             "PSM001_PROTEIN100" : {
-                "evidence": "W:\\pavel_test\\27HepG2\\results\\40021621\\ML\\discoveryDIA\\PSM001_PROTEIN100\\txt\\evidence.txt",
-                "peptides": "W:\\pavel_test\\27HepG2\\results\\40021621\\ML\\discoveryDIA\\PSM001_PROTEIN100\\txt\\peptides.txt",
-                "proteinGroups": "W:\\pavel_test\\27HepG2\\results\\40021621\\ML\\discoveryDIA\\PSM001_PROTEIN100\\txt\\proteinGroups.txt"
+                "evidence": "<folder>\\evidence.txt",
+                "peptides": "<folder>\\peptides.txt",
+                "proteinGroups": "<folder>\\proteinGroups.txt"
 
             }
         }
@@ -31,27 +31,27 @@
     "noML" : {
         "libraryDIA" : {
             "PSM100_PROTEIN100" : {
-                "evidence": "W:\\pavel_test\\27HepG2\\results\\40021621\\noML\\libraryDIA\\PSM100_PROTEIN100\\txt\\evidence.txt",
-                "peptides": "W:\\pavel_test\\27HepG2\\results\\40021621\\noML\\libraryDIA\\PSM100_PROTEIN100\\txt\\peptides.txt",
-                "proteinGroups": "W:\\pavel_test\\27HepG2\\results\\40021621\\noML\\libraryDIA\\PSM100_PROTEIN100\\txt\\proteinGroups.txt"
+                "evidence": "<folder>\\evidence.txt",
+                "peptides": "<folder>\\peptides.txt",
+                "proteinGroups": "<folder>\\proteinGroups.txt"
             },
             "PSM001_PROTEIN100" : {
-                "evidence": "W:\\pavel_test\\27HepG2\\results\\40021621\\noML\\libraryDIA\\PSM001_PROTEIN100\\txt\\evidence.txt",
-                "peptides": "W:\\pavel_test\\27HepG2\\results\\40021621\\noML\\libraryDIA\\PSM001_PROTEIN100\\txt\\peptides.txt",
-                "proteinGroups": "W:\\pavel_test\\27HepG2\\results\\40021621\\noML\\libraryDIA\\PSM001_PROTEIN100\\txt\\proteinGroups.txt"
+                "evidence": "<folder>\\evidence.txt",
+                "peptides": "<folder>\\peptides.txt",
+                "proteinGroups": "<folder>\\proteinGroups.txt"
 
             }
         },
         "discoveryDIA" : {
             "PSM100_PROTEIN100" : {
-                "evidence": "W:\\pavel_test\\27HepG2\\results\\40021621\\noML\\discoveryDIA\\PSM100_PROTEIN100\\txt\\evidence.txt",
-                "peptides": "W:\\pavel_test\\27HepG2\\results\\40021621\\noML\\discoveryDIA\\PSM100_PROTEIN100\\txt\\peptides.txt",
-                "proteinGroups": "W:\\pavel_test\\27HepG2\\results\\40021621\\noML\\discoveryDIA\\PSM100_PROTEIN100\\txt\\proteinGroups.txt"
+                "evidence": "<folder>\\evidence.txt",
+                "peptides": "<folder>\\peptides.txt",
+                "proteinGroups": "<folder>\\proteinGroups.txt"
             },
             "PSM001_PROTEIN100" : {
-                "evidence": "W:\\pavel_test\\27HepG2\\results\\40021621\\noML\\discoveryDIA\\PSM001_PROTEIN100\\txt\\evidence.txt",
-                "peptides": "W:\\pavel_test\\27HepG2\\results\\40021621\\noML\\discoveryDIA\\PSM001_PROTEIN100\\txt\\peptides.txt",
-                "proteinGroups": "W:\\pavel_test\\27HepG2\\results\\40021621\\noML\\discoveryDIA\\PSM001_PROTEIN100\\txt\\proteinGroups.txt"
+                "evidence": "<folder>\\evidence.txt",
+                "peptides": "<folder>\\peptides.txt",
+                "proteinGroups": "<folder>\\proteinGroups.txt"
 
             }
         }
