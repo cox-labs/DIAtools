@@ -1,72 +1,69 @@
 {
-    "outputFolder" : "",
-    "ML" : {
-        "libraryDIA" : {
-            "outputFile" : "a",
-            "PSM100_PROTEIN100" : {
+    "outputFolder": "",
+    "ML": {
+        "libraryDIA": {
+            "outputFile": "a",
+            "PSM100_PROTEIN100": {
                 "evidence": "<folder>\\evidence.txt",
                 "peptides": "<folder>\\peptides.txt",
                 "proteinGroups": "<folder>\\proteinGroups.txt"
             },
-            "PSM001_PROTEIN100" : {
+            "PSM001_PROTEIN100": {
                 "evidence": "<folder>\\evidence.txt",
                 "peptides": "<folder>\\peptides.txt",
                 "proteinGroups": "<folder>\\proteinGroups.txt"
-
             }
         },
-        "discoveryDIA" : {
+        "discoveryDIA": {
             "outputFile": "b",
-            "PSM100_PROTEIN100" : {
+            "PSM100_PROTEIN100": {
                 "evidence": "<folder>\\evidence.txt",
                 "peptides": "<folder>\\peptides.txt",
                 "proteinGroups": "<folder>\\proteinGroups.txt"
             },
-            "PSM001_PROTEIN100" : {
+            "PSM001_PROTEIN100": {
                 "evidence": "<folder>\\evidence.txt",
                 "peptides": "<folder>\\peptides.txt",
                 "proteinGroups": "<folder>\\proteinGroups.txt"
             }
         }
     },
-    "noML" : {
-        "libraryDIA" : {
-            "outputFile" : "c",
-            "PSM100_PROTEIN100" : {
+    "noML": {
+        "libraryDIA": {
+            "outputFile": "c",
+            "PSM100_PROTEIN100": {
                 "evidence": "<folder>\\evidence.txt",
                 "peptides": "<folder>\\peptides.txt",
                 "proteinGroups": "<folder>\\proteinGroups.txt"
             },
-            "PSM001_PROTEIN100" : {
+            "PSM001_PROTEIN100": {
                 "evidence": "<folder>\\evidence.txt",
                 "peptides": "<folder>\\peptides.txt",
                 "proteinGroups": "<folder>\\proteinGroups.txt"
-
             }
         },
-        "discoveryDIA" : {
-            "outputFile" : "d",
-            "PSM100_PROTEIN100" : {
+        "discoveryDIA": {
+            "outputFile": "d",
+            "PSM100_PROTEIN100": {
                 "evidence": "<folder>\\evidence.txt",
                 "peptides": "<folder>\\peptides.txt",
                 "proteinGroups": "<folder>\\proteinGroups.txt"
             },
-            "PSM001_PROTEIN100" : {
+            "PSM001_PROTEIN100": {
                 "evidence": "<folder>\\evidence.txt",
                 "peptides": "<folder>\\peptides.txt",
                 "proteinGroups": "<folder>\\proteinGroups.txt"
-
             }
         }
     },
-    "human" : {
+    "human": {
         "id": "9606",
         "speciesName": "Homo sapiens"
     },
-    "maize" : {
+    "maize": {
         "id": "4577",
         "speciesName": "Zea mays"
     },
-    "fileSizeFactor" : 1.1758224431686437455365009877665,
-    "figureSize" : 5
+    "fileSizeFactor": 1.1758224431686437455365009877665,
+    "figureSize": 5
 }
