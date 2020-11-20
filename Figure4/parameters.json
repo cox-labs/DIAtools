@@ -16,7 +16,7 @@
             }
         },
         "discoveryDIA" : {
-            "ouputFile" : "b",
+            "ouputFile": "b",
             "PSM100_PROTEIN100" : {
                 "evidence": "<folder>\\evidence.txt",
                 "peptides": "<folder>\\peptides.txt",

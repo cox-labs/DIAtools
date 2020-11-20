@@ -1,45 +1,61 @@
 {
-    "outputFolder" : "",
+    "outputFolder": "",
     "SCIEX": {
-        "groupA" : ["08", "10", "12"],
-        "groupB" : ["09", "11", "13"],
-        "libraryDIA" : {
-            "outputFile" : "b",
-            "proteinGroup" : "<folder>\\proteinGroups.txt"
+        "groupA": [
+            "08",
+            "10",
+            "12"
+        ],
+        "groupB": [
+            "09",
+            "11",
+            "13"
+        ],
+        "libraryDIA": {
+            "outputFile": "b",
+            "proteinGroup": "<folder>\\proteinGroups.txt"
         },
-        "discoveryDIA" : {
-            "outputFile" : "c",
-            "proteinGroup" :  "<folder>\\proteinGroups.txt"
+        "discoveryDIA": {
+            "outputFile": "c",
+            "proteinGroup": "<folder>\\proteinGroups.txt"
         }
     },
     "timsTOF": {
-        "groupA" : ["A_diaPASEF_py5_90min_Slot2-19_01_4026", "A_diaPASEF_py5_90min_Slot2-19_01_4027", "A_diaPASEF_py5_90min_Slot2-19_01_4028"],
-        "groupB" : ["B_diaPASEF_py5_90min_Slot2-20_01_4030", "B_diaPASEF_py5_90min_Slot2-20_01_4031", "B_diaPASEF_py5_90min_Slot2-20_01_4032"],
-        "libraryDIA" : {
-            "outputFile" : "d",
-            "proteinGroup" : "<folder>\\proteinGroups.txt"
+        "groupA": [
+            "A_diaPASEF_py5_90min_Slot2-19_01_4026",
+            "A_diaPASEF_py5_90min_Slot2-19_01_4027",
+            "A_diaPASEF_py5_90min_Slot2-19_01_4028"
+        ],
+        "groupB": [
+            "B_diaPASEF_py5_90min_Slot2-20_01_4030",
+            "B_diaPASEF_py5_90min_Slot2-20_01_4031",
+            "B_diaPASEF_py5_90min_Slot2-20_01_4032"
+        ],
+        "libraryDIA": {
+            "outputFile": "d",
+            "proteinGroup": "<folder>\\proteinGroups.txt"
         },
-        "discoveryDIA" : {
-            "outputFile" : "e",
-            "proteinGroup" : "<folder>\\proteinGroups.txt"
+        "discoveryDIA": {
+            "outputFile": "e",
+            "proteinGroup": "<folder>\\proteinGroups.txt"
         }
     },
-    "minValidValue" : 1,
-    "dotSize" : 5,
-    "dotAlpha" : 0.5,
-    "ecoli" : {
-        "name" : "Escherichia coli",
-        "expectedValue" : -2,
-        "color" : "#7670b3"
+    "minValidValue": 1,
+    "dotSize": 5,
+    "dotAlpha": 0.5,
+    "ecoli": {
+        "name": "Escherichia coli",
+        "expectedValue": -2,
+        "color": "#7670b3"
     },
-    "yeast" : {
-        "name" : "Saccharomyces cerevisiae",
-        "expectedValue" : 1,
-        "color" : "#d76127"
+    "yeast": {
+        "name": "Saccharomyces cerevisiae",
+        "expectedValue": 1,
+        "color": "#d76127"
     },
-    "human" : {
-        "name" : "Homo sapiens",
-        "expectedValue" : 0,
-        "color" : "#199e77"
+    "human": {
+        "name": "Homo sapiens",
+        "expectedValue": 0,
+        "color": "#199e77"
     }
 }
