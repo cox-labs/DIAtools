@@ -1,0 +1,69 @@
+{
+    "outputFolder" : "",
+    "ML" : {
+        "libraryDIA" : {
+            "PSM100_PROTEIN100" : {
+                "evidence": "W:\\pavel_test\\27HepG2\\results\\40021621\\ML\\libraryDIA\\PSM100_PROTEIN100\\txt\\evidence.txt",
+                "peptides": "W:\\pavel_test\\27HepG2\\results\\40021621\\ML\\libraryDIA\\PSM100_PROTEIN100\\txt\\peptides.txt",
+                "proteinGroups": "W:\\pavel_test\\27HepG2\\results\\40021621\\ML\\libraryDIA\\PSM100_PROTEIN100\\txt\\proteinGroups.txt"
+            },
+            "PSM001_PROTEIN100" : {
+                "evidence": "W:\\pavel_test\\27HepG2\\results\\40021621\\ML\\libraryDIA\\PSM001_PROTEIN100\\txt\\evidence.txt",
+                "peptides": "W:\\pavel_test\\27HepG2\\results\\40021621\\ML\\libraryDIA\\PSM001_PROTEIN100\\txt\\peptides.txt",
+                "proteinGroups": "W:\\pavel_test\\27HepG2\\results\\40021621\\ML\\libraryDIA\\PSM001_PROTEIN100\\txt\\proteinGroups.txt"
+
+            }
+        },
+        "discoveryDIA" : {
+            "PSM100_PROTEIN100" : {
+                "evidence": "W:\\pavel_test\\27HepG2\\results\\40021621\\ML\\discoveryDIA\\PSM100_PROTEIN100\\txt\\evidence.txt",
+                "peptides": "W:\\pavel_test\\27HepG2\\results\\40021621\\ML\\discoveryDIA\\PSM100_PROTEIN100\\txt\\peptides.txt",
+                "proteinGroups": "W:\\pavel_test\\27HepG2\\results\\40021621\\ML\\discoveryDIA\\PSM100_PROTEIN100\\txt\\proteinGroups.txt"
+            },
+            "PSM001_PROTEIN100" : {
+                "evidence": "W:\\pavel_test\\27HepG2\\results\\40021621\\ML\\discoveryDIA\\PSM001_PROTEIN100\\txt\\evidence.txt",
+                "peptides": "W:\\pavel_test\\27HepG2\\results\\40021621\\ML\\discoveryDIA\\PSM001_PROTEIN100\\txt\\peptides.txt",
+                "proteinGroups": "W:\\pavel_test\\27HepG2\\results\\40021621\\ML\\discoveryDIA\\PSM001_PROTEIN100\\txt\\proteinGroups.txt"
+
+            }
+        }
+    },
+    "noML" : {
+        "libraryDIA" : {
+            "PSM100_PROTEIN100" : {
+                "evidence": "W:\\pavel_test\\27HepG2\\results\\40021621\\noML\\libraryDIA\\PSM100_PROTEIN100\\txt\\evidence.txt",
+                "peptides": "W:\\pavel_test\\27HepG2\\results\\40021621\\noML\\libraryDIA\\PSM100_PROTEIN100\\txt\\peptides.txt",
+                "proteinGroups": "W:\\pavel_test\\27HepG2\\results\\40021621\\noML\\libraryDIA\\PSM100_PROTEIN100\\txt\\proteinGroups.txt"
+            },
+            "PSM001_PROTEIN100" : {
+                "evidence": "W:\\pavel_test\\27HepG2\\results\\40021621\\noML\\libraryDIA\\PSM001_PROTEIN100\\txt\\evidence.txt",
+                "peptides": "W:\\pavel_test\\27HepG2\\results\\40021621\\noML\\libraryDIA\\PSM001_PROTEIN100\\txt\\peptides.txt",
+                "proteinGroups": "W:\\pavel_test\\27HepG2\\results\\40021621\\noML\\libraryDIA\\PSM001_PROTEIN100\\txt\\proteinGroups.txt"
+
+            }
+        },
+        "discoveryDIA" : {
+            "PSM100_PROTEIN100" : {
+                "evidence": "W:\\pavel_test\\27HepG2\\results\\40021621\\noML\\discoveryDIA\\PSM100_PROTEIN100\\txt\\evidence.txt",
+                "peptides": "W:\\pavel_test\\27HepG2\\results\\40021621\\noML\\discoveryDIA\\PSM100_PROTEIN100\\txt\\peptides.txt",
+                "proteinGroups": "W:\\pavel_test\\27HepG2\\results\\40021621\\noML\\discoveryDIA\\PSM100_PROTEIN100\\txt\\proteinGroups.txt"
+            },
+            "PSM001_PROTEIN100" : {
+                "evidence": "W:\\pavel_test\\27HepG2\\results\\40021621\\noML\\discoveryDIA\\PSM001_PROTEIN100\\txt\\evidence.txt",
+                "peptides": "W:\\pavel_test\\27HepG2\\results\\40021621\\noML\\discoveryDIA\\PSM001_PROTEIN100\\txt\\peptides.txt",
+                "proteinGroups": "W:\\pavel_test\\27HepG2\\results\\40021621\\noML\\discoveryDIA\\PSM001_PROTEIN100\\txt\\proteinGroups.txt"
+
+            }
+        }
+    },
+    "human" : {
+        "id": "9606",
+        "speciesName": "Homo sapiens"
+    },
+    "maize" : {
+        "id": "4577",
+        "speciesName": "Zea mays"
+    },
+    "fileSizeFactor" : 1.1758224431686437455365009877665,
+    "figureSize" : 5
+}
