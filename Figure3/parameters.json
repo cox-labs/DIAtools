@@ -1,0 +1,13 @@
+{
+    "outputFolder": "",
+    "fastaFiles": [
+        "<folder>\\UP000005640_9606.fasta",
+        "<folder>\\UP000005640_9606_additional.fasta"
+    ],
+    "MaxQuantFile": "<folder>\\MaxQuant\\proteinGroups.txt",
+    "SpectronautFile": "<folder>\\Spectronaut\\proteinGroups.txt",
+    "NgsDataFile": "<folder>\\Caltech_HepG2_cell_PE_i200.txt",
+    "minCount" : 6,
+    "figSize" : 5,
+    "dotSize" : 8
+}
