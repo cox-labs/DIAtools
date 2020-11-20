@@ -2,6 +2,7 @@
     "outputFolder" : "",
     "ML" : {
         "libraryDIA" : {
+            "ouputFile" : "a",
             "PSM100_PROTEIN100" : {
                 "evidence": "<folder>\\evidence.txt",
                 "peptides": "<folder>\\peptides.txt",
@@ -15,6 +16,7 @@
             }
         },
         "discoveryDIA" : {
+            "ouputFile" : "b",
             "PSM100_PROTEIN100" : {
                 "evidence": "<folder>\\evidence.txt",
                 "peptides": "<folder>\\peptides.txt",
@@ -24,12 +26,12 @@
                 "evidence": "<folder>\\evidence.txt",
                 "peptides": "<folder>\\peptides.txt",
                 "proteinGroups": "<folder>\\proteinGroups.txt"
-
             }
         }
     },
     "noML" : {
         "libraryDIA" : {
+            "ouputFile" : "c",
             "PSM100_PROTEIN100" : {
                 "evidence": "<folder>\\evidence.txt",
                 "peptides": "<folder>\\peptides.txt",
@@ -43,6 +45,7 @@
             }
         },
         "discoveryDIA" : {
+            "ouputFile" : "d",
             "PSM100_PROTEIN100" : {
                 "evidence": "<folder>\\evidence.txt",
                 "peptides": "<folder>\\peptides.txt",

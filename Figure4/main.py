@@ -1,6 +1,6 @@
-import os
-import itertools
 import json
+import os
+
 from matplotlib import pyplot as plt
 
 
@@ -26,7 +26,6 @@ class EvidencePeptideTable:
                     EvidencePeptideRecord(float(spl[indexes['PEP']]),
                                           spl[indexes['Taxonomy IDs']],
                                           spl[indexes['Reverse']] == '+'))
-
 
     @staticmethod
     def cut(data, maxvalue=0.05):
@@ -147,77 +146,73 @@ class ProteinTable:
         return fdrs, cnts[:len(fdrs)]
 
 
-def plot_impl(mlStatus, params, out_files):
-    #miny = 1000
-    #maxy = 3000000
+def plot_fdr_plot(mlStatus, libraryStatus, params, out_file):
+    # miny = 1000
+    # maxy = 3000000
     edge = 0.002
-    minx = 0-edge
+    minx = 0 - edge
     maxx = 0.05
-    libs = ['libraryDIA', 'discoveryDIA']
     psms = ['PSM001_PROTEIN100', 'PSM100_PROTEIN100']
     colors = ["blue", "green", "red"]
     names = ["Matches", "Peptides", "Proteins"]
     files = ["evidence", "peptides", "proteinGroups"]
     classes = [EvidencePeptideTable, EvidencePeptideTable, ProteinTable]
-    for i in range(len(libs)):
-        fig, ax = plt.subplots(1, 1, figsize=(params["figureSize"], params["figureSize"]))
-        cnts = []
-        for index in range(len(classes)):
-            if names[index] == "Proteins":
-                fullPath = f"{params[mlStatus][libs[i]][psms[0]][files[index]]}"
-            else:
-                fullPath = f"{params[mlStatus][libs[i]][psms[1]][files[index]]}"
-            if not os.path.exists(fullPath):
-                continue
-            print(fullPath)
-            data = classes[index](fullPath)
-            print("Internal001")
-            internalFDRx0, internalFDRy0 = data.internalFDR(params, 0.01)
-            externalFDRx0, externalFDRy0 = data.externalFDR(params, 0.01)
-            print("Internal: ", len(internalFDRx0))
-            print("External: ", len(externalFDRx0))
-            cnts.append(len(internalFDRx0))
-            print("Internal005")
-            internalFDRx, internalFDRy = data.internalFDR(params)
-            print("External005")
-            externalFDRx, externalFDRy = data.externalFDR(params)
-            ax.plot(internalFDRx, internalFDRy, color=colors[index],
-                        label='%s/Internal FDR' % names[index], linewidth=2, linestyle="-")
-            ax.plot(externalFDRx, externalFDRy, color=colors[index],
-                        label='%s/External FDR' % names[index], linewidth=2, linestyle=":")
-        ax.grid(which='major', color="grey", alpha=0.5, linewidth=0.15, linestyle="-")
-        ax.grid(which='minor', color="grey", alpha=0.5, linewidth=0.15, linestyle="-")
-        for j in range(len(cnts)):
-            ax.text(0.01, cnts[j], str(cnts[j]), color=colors[j], horizontalalignment="right")
-        ax.axvline(x=0.01, color="black", alpha=0.5, linewidth=1.0, linestyle="-")
-        ax.set_xlabel('Estimated FDR')
-        ax.set_xlim((minx, maxx))
-        ax.set_ylabel('Count')
-        #ax.set_ylim((miny, maxy))
-        ax.set_yscale('log')
-        ax.set_title(libs[i])
-        ax.spines['right'].set_visible(False)
-        ax.spines['top'].set_visible(False)
-        print("Done: " + str(libs[i]))
-        handles, labels = ax.get_legend_handles_labels()
-        fig.legend(handles, labels, loc='upper center', ncol=3)
-        file = out_files[i]
-        if os.path.isfile(file):
-            os.remove(file)
-        plt.savefig(file)
+    fig, ax = plt.subplots(1, 1, figsize=(params["figureSize"], params["figureSize"]))
+    cnts = []
+    for index in range(len(classes)):
+        if names[index] == "Proteins":
+            fullPath = f"{params[mlStatus][libraryStatus][psms[0]][files[index]]}"
+        else:
+            fullPath = f"{params[mlStatus][libraryStatus][psms[1]][files[index]]}"
+        if not os.path.exists(fullPath):
+            continue
+        print(fullPath)
+        data = classes[index](fullPath)
+        print("Internal001")
+        internalFDRx0, internalFDRy0 = data.internalFDR(params, 0.01)
+        externalFDRx0, externalFDRy0 = data.externalFDR(params, 0.01)
+        print(f"Internal: {len(internalFDRx0)}")
+        print(f"External: {len(externalFDRx0)}")
+        cnts.append(len(internalFDRx0))
+        print("Internal005")
+        internalFDRx, internalFDRy = data.internalFDR(params)
+        print("External005")
+        externalFDRx, externalFDRy = data.externalFDR(params)
+        ax.plot(internalFDRx, internalFDRy, color=colors[index],
+                label=f'{names[index]}/Internal FDR', linewidth=2, linestyle="-")
+        ax.plot(externalFDRx, externalFDRy, color=colors[index],
+                label=f'{names[index]}/External FDR', linewidth=2, linestyle=":")
+    ax.grid(which='major', color="grey", alpha=0.5, linewidth=0.15, linestyle="-")
+    ax.grid(which='minor', color="grey", alpha=0.5, linewidth=0.15, linestyle="-")
+    for j in range(len(cnts)):
+        ax.text(0.01, cnts[j], str(cnts[j]), color=colors[j], horizontalalignment="right")
+    ax.axvline(x=0.01, color="black", alpha=0.5, linewidth=1.0, linestyle="-")
+    ax.set_xlabel('Estimated FDR')
+    ax.set_xlim((minx, maxx))
+    ax.set_ylabel('Count')
+    # ax.set_ylim((miny, maxy))
+    ax.set_yscale('log')
+    ax.set_title(libraryStatus)
+    ax.spines['right'].set_visible(False)
+    ax.spines['top'].set_visible(False)
+    print(f"Done: {libraryStatus}")
+    handles, labels = ax.get_legend_handles_labels()
+    fig.legend(handles, labels, loc='upper center', ncol=3)
+    file = out_file
+    if os.path.isfile(file):
+        os.remove(file)
+    plt.savefig(file)
 
 
 def plot(params):
-    plot_impl("ML", params,
-        [
-            os.path.join(params["outputFolder"], "{}.{}".format("a", "pdf")),
-            os.path.join(params["outputFolder"], "{}.{}".format("b", "pdf"))
-        ])
-    plot_impl("noML", params,
-        [
-            os.path.join(params["outputFolder"], "{}.{}".format("c", "pdf")),
-            os.path.join(params["outputFolder"], "{}.{}".format("d", "pdf"))
-        ])
+    for mlStatus in ["ML", "noML"]:
+        for libraryStatus in ["libraryDIA", "discoveryDIA"]:
+            plot_fdr_plot(
+                mlStatus,
+                libraryStatus,
+                params,
+                os.path.join(params["outputFolder"],
+                             "{}.{}".format(params[mlStatus][libraryStatus]["ouputFile"], "pdf")))
 
 
 if __name__ == "__main__":
