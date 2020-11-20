@@ -1,0 +1,83 @@
+{
+    "outputFolder": "",
+    "ngsData": {
+        "file": "<folder>\\HEK293.log2RPKM.txt",
+        "geneNameColumn": "Gene name",
+        "rpkmColumns": [
+            "HEK293.repA",
+            "HEK293.repB"
+        ],
+        "rpkmMin": -5,
+        "rpkmMax": 10
+    },
+    "experiments": [
+        "HEK1",
+        "HEK2",
+        "HEK3"
+    ],
+    "singleshotDIA": {
+        "Single-Shot DDA Library": "<folder>\\proteinGroups.txt",
+        "Fractionated DDA Library": "<folder>\\proteinGroups.txt",
+        "Discovery Library": "<folder>\\proteinGroups.txt"
+    },
+    "fractionatedDIA": {
+        "Single-Shot DDA Library": "<folder>\\proteinGroups.txt",
+        "Fractionated DDA Library": "<folder>\\proteinGroups.txt",
+        "Discovery Library": "<folder>\\proteinGroups.txt"
+    },
+    "order": [
+        "Single-Shot DDA Library",
+        "Fractionated DDA Library",
+        "Discovery Library",
+        "RNA-seq"
+    ],
+    "colorOrder": [
+        {
+            "comb": [
+                true,
+                true,
+                true,
+                true
+            ],
+            "color": "#8065AA"
+        },
+        {
+            "comb": [
+                false,
+                true,
+                true,
+                true
+            ],
+            "color": "#33B1B4"
+        },
+        {
+            "comb": [
+                false,
+                true,
+                false,
+                true
+            ],
+            "color": "#FBCE55"
+        },
+        {
+            "comb": [
+                false,
+                false,
+                true,
+                true
+            ],
+            "color": "#DF517D"
+        },
+        {
+            "comb": [
+                false,
+                false,
+                false,
+                true
+            ],
+            "color": "#B3B3B3"
+        }
+    ],
+    "figSize": 5,
+    "dotSize": 1
+}
