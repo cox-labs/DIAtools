@@ -56,7 +56,7 @@ class EvidencePeptideTable:
         fileSizeFactor = params["fileSizeFactor"]
         evidences = [self.evidences[i] for i in range(len(self.evidences))
                      if not self.evidences[i].reverse]
-        evidences.sort(key=lambda x: x.pep)
+        evidences.sort(key=lambda i: i.pep)
         fdrs = []
         cnts = []
         nhuman = 0
@@ -127,7 +127,7 @@ class ProteinTable:
         fileSizeFactor = params["fileSizeFactor"]
         proteins = [self.proteins[i] for i in range(len(self.proteins))
                     if not self.proteins[i].reverse]
-        proteins.sort(key=lambda x: x.score, reverse=True)
+        proteins.sort(key=lambda i: i.score, reverse=True)
         fdrs = []
         cnts = []
         nhuman = 0
@@ -198,10 +198,9 @@ def plot_fdr_plot(mlStatus, libraryStatus, params, out_file):
     print(f"Done: {libraryStatus}")
     handles, labels = ax.get_legend_handles_labels()
     fig.legend(handles, labels, loc='upper center', ncol=3)
-    file = out_file
-    if os.path.isfile(file):
-        os.remove(file)
-    plt.savefig(file)
+    if os.path.isfile(out_file):
+        os.remove(out_file)
+    plt.savefig(out_file)
 
 
 def plot(params):
@@ -212,9 +211,9 @@ def plot(params):
                 libraryStatus,
                 params,
                 os.path.join(params["outputFolder"],
-                             "{}.{}".format(params[mlStatus][libraryStatus]["ouputFile"], "pdf")))
+                             "{}.{}".format(params[mlStatus][libraryStatus]["outputFile"], "pdf")))
 
 
 if __name__ == "__main__":
-    with open('parameters.json', 'r') as fs:
-        plot(json.loads(fs.read()))
+    with open('parameters.json', 'r') as parameters_fs:
+        plot(json.loads(parameters_fs.read()))

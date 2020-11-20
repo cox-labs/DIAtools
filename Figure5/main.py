@@ -18,14 +18,14 @@ class ProteinRecords:
     def __init__(self, records):
         self.records = records
 
-    def get_ratios(self, species, minValidValues, type):
+    def get_ratios(self, species, minValidValues, quantType):
         x = []
         y = []
         ids = []
         for record in self.records:
             if record.species != species:
                 continue
-            if type == 'LFQ':
+            if quantType == 'LFQ':
                 tmp0 = [lfq for lfq in record.lfqs[0] if lfq != 0]
                 tmp1 = [lfq for lfq in record.lfqs[1] if lfq != 0]
             else:
@@ -38,12 +38,12 @@ class ProteinRecords:
             ids.append(record.proteinIds)
         return x, y, ids
 
-    def get_counts(self, species, type):
+    def get_counts(self, species, quantType):
         x = []
         for record in self.records:
             if record.species != species:
                 continue
-            if type == 'LFQ':
+            if quantType == 'LFQ':
                 tmp0 = [lfq for lfq in record.lfqs[0] if lfq != 0]
                 tmp1 = [lfq for lfq in record.lfqs[1] if lfq != 0]
             else:
@@ -57,8 +57,8 @@ class ProteinRecords:
     @staticmethod
     def read_protein_groups(filename, groupA, groupB):
         records = []
-        with open(filename) as fs:
-            header = fs.readline().rstrip().split('\t')
+        with open(filename) as file_fs:
+            header = file_fs.readline().rstrip().split('\t')
             proteinIds_index = header.index('Protein IDs')
             intensities_a_indexes = [header.index("Intensity {}".format(i)) for i in groupA]
             intensities_b_indexes = [header.index("Intensity {}".format(i)) for i in groupB]
@@ -66,7 +66,7 @@ class ProteinRecords:
             lfqs_b_indexes = [header.index("LFQ intensity {}".format(i)) for i in groupB]
             species_index = header.index('Species')
             filter_indexes = [header.index(i) for i in ['Only identified by site', 'Reverse', 'Potential contaminant']]
-            for line in fs:
+            for line in file_fs:
                 spl = line.rstrip().split('\t')
                 if sum([spl[filter_index] == '+' for filter_index in filter_indexes]) > 0 or spl[species_index] == '':
                     continue
@@ -150,5 +150,5 @@ def plot(params):
 
 
 if __name__ == "__main__":
-    with open("parameters.json", 'r') as fs:
-        plot(json.loads(fs.read()))
+    with open("parameters.json", 'r') as parameters_fs:
+        plot(json.loads(parameters_fs.read()))
