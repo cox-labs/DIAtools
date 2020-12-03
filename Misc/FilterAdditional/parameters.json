@@ -1,20 +1,20 @@
 {
     "input" : {
         "fasta": {
-            "base_fasta" : "D:\\data\\coon\\homo_sapiens\\UP000005640_9606.fasta",
-            "additional_fasta" : "D:\\data\\coon\\homo_sapiens\\UP000005640_9606_additional.fasta"
+            "base_fasta" : "<path to fasta>\\UP000005640_9606.fasta",
+            "additional_fasta" : "<path to fasta>\\UP000005640_9606_additional.fasta"
         },
         "library" : {
-            "evidence" : "D:\\data\\coon\\homo_sapiens\\missed_cleavages_0\\evidence.txt",
-            "peptides" : "D:\\data\\coon\\homo_sapiens\\missed_cleavages_0\\peptides.txt",
-            "msms" : "D:\\data\\coon\\homo_sapiens\\missed_cleavages_0\\msms.txt"
+            "evidence" : "<path to old library>\\evidence.txt",
+            "peptides" : "<path to old library>\\peptides.txt",
+            "msms" : "<path to old library>\\msms.txt"
         }
     },
     "output" : {
         "library" : {
-            "evidence" : "D:\\data\\coon\\homo_sapiens\\missed_cleavages_0_wo\\evidence.txt",
-            "peptides" : "D:\\data\\coon\\homo_sapiens\\missed_cleavages_0_wo\\peptides.txt",
-            "msms" : "D:\\data\\coon\\homo_sapiens\\missed_cleavages_0_wo\\msms.txt"
+            "evidence" : "<path to new library>\\evidence.txt",
+            "peptides" : "<path to new library>\\peptides.txt",
+            "msms" : "<path to new library>\\msms.txt"
         }
     }
 }
