@@ -1,8 +1,7 @@
 {
     "input" : {
         "fasta": {
-            "base_fasta" : "<path to fasta>\\UP000005640_9606.fasta",
-            "additional_fasta" : "<path to fasta>\\UP000005640_9606_additional.fasta"
+            "base_fasta" : "<path to fasta>\\UP000005640_9606.fasta"
         },
         "library" : {
             "evidence" : "<path to old library>\\evidence.txt",
