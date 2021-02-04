@@ -1,5 +1,6 @@
 import json
 import re
+import sys
 
 parse_expression = ">.*\|(.*)\|"
 
@@ -57,14 +58,24 @@ def filter_library(params):
         msms_out.write(msms_in.readline())
         header_spl = header.split("\t")
         sequence_index = header_spl.index("Sequence")
-        for line in evidence_in:
+        proteins_index = header_spl.index("Proteins")
+        for evidence_line in evidence_in:
             msms_line = msms_in.readline()
-            spl = line.rstrip().split('\t')
-            if spl[sequence_index] in peptides:
-                evidence_out.write(line)
+            evidence_spl = evidence_line.rstrip().split('\t')
+            ps = []
+            for p in evidence_spl[proteins_index].split(';'):
+                if p in bname2sequence:
+                    ps.append(p)
+            if len(ps) >= 1 and evidence_spl[sequence_index] in peptides:
+                evidence_spl[proteins_index] = ";".join(ps)
+                evidence_out.write("\t".join(evidence_spl) + "\n")
                 msms_out.write(msms_line)
 
 
 if __name__ == "__main__":
-    with open("parameters.json", 'r') as parameters_fs:
+    if len(sys.argv) == 1:
+        parameters_file = "parameters.json"
+    else:
+        parameters_file = sys.argv[1]
+    with open(parameters_file, 'r') as parameters_fs:
         filter_library(json.loads(parameters_fs.read()))
