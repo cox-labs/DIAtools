@@ -1,0 +1,128 @@
+{
+    "output": {
+        "avant-garde": "<folder>\\avant_garde.pdf",
+        "tq001.mixed": "<folder>\\tq001.mixed.pdf",
+        "common.metrics": "<folder>\\common.metrics.pdf"
+    },
+    "input": {
+        "data": {
+            "avant-garde": {
+                "files": {
+                    "avant-garde": {
+                        "txt": "<folder>\\Data_Fig_S14x.Panel_B_Avg_vs_mProphet0pt01.txt",
+                        "json": "<temporary folder>\\Data_Fig_S14x.Panel_B_Avg_vs_mProphet0pt01.json"
+                    }
+                },
+                "columns": {
+                    "modPeptideSequence": "ModifiedSequence",
+                    "peptideSequence": "PeptideSequence",
+                    "charge": "PrecursorCharge",
+                    "taxonomy": "Taxonomy",
+                    "ratioSamples": "Ratio",
+                    "ratio": "Log_measured_ratio",
+                    "intensity": "Mean_intensity"
+                },
+                "species": {
+                    "HUMAN": "Homo sapiens",
+                    "ECOLI": "Escherichia coli",
+                    "YEAST": "Saccharomyces cerevisiae"
+                }
+            },
+            "maxquant": {
+                "tq001.mixed": {
+                    "txt": "<folder>\\proteinGroups.txt",
+                    "json": "<temporary folder>\\tq001.mixed.json"
+                }
+            },
+            "samples": {
+                "A": {
+                    "columns": [
+                        "A",
+                        "A_20180623134815",
+                        "A_20180623154045",
+                        "A_20180623173314"
+                    ],
+                    "proportions": {
+                        "Homo sapiens": 45,
+                        "Saccharomyces cerevisiae": 5,
+                        "Escherichia coli": 50
+                    }
+                },
+                "B": {
+                    "columns": [
+                        "B",
+                        "B_20180623220525",
+                        "B_20180623235755",
+                        "B_20180624015026"
+                    ],
+                    "proportions": {
+                        "Homo sapiens": 45,
+                        "Saccharomyces cerevisiae": 20,
+                        "Escherichia coli": 35
+                    }
+                },
+                "C": {
+                    "columns": [
+                        "C",
+                        "C_20180624062249",
+                        "C_20180624081531",
+                        "C_20180624100813"
+                    ],
+                    "proportions": {
+                        "Homo sapiens": 45,
+                        "Saccharomyces cerevisiae": 40,
+                        "Escherichia coli": 15
+                    }
+                },
+                "D": {
+                    "columns": [
+                        "D",
+                        "D_20180624144046",
+                        "D_20180624163323",
+                        "D_20180624182601"
+                    ],
+                    "proportions": {
+                        "Homo sapiens": 45,
+                        "Saccharomyces cerevisiae": 50,
+                        "Escherichia coli": 5
+                    }
+                }
+            },
+            "ratios": {
+                "colors": {
+                    "A/B": "#ed2024",
+                    "A/C": "#00a08a",
+                    "A/D": "#f1ad1e",
+                    "B/C": "#f5841f",
+                    "B/D": "#5dbcd6",
+                    "C/D": "#207ca5"
+                }
+            }
+        },
+        "species": {
+            "Homo sapiens": {
+                "fasta": [
+                    "<folder>\\UP000005640_9606.fasta",
+                    "<folder>\\UP000005640_9606_additional.fasta"
+                ]
+            },
+            "Saccharomyces cerevisiae": {
+                "fasta": [
+                    "<folder>\\UP000002311_559292.fasta",
+                    "<folder>\\UP000002311_559292_additional.fasta"
+                ]
+            },
+            "Escherichia coli": {
+                "fasta": [
+                    "<folder>\\UP000000625_83333.fasta",
+                    "<folder>\\UP000000625_83333_additional.fasta"
+                ]
+            }
+        }
+    },
+    "plot": {
+        "minValidValue": 3,
+        "dotSize": 5,
+        "dotAlpha": 0.5
+    }
+}
