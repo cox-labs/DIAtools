@@ -32,7 +32,7 @@ Follow to the recommendations on the [DeepMass' github webpage](https://github.c
 ### WiNNer
 Follow to the recommendations on the [WiNNer' github webpage](https://github.com/cox-labs/wiNNer#winner).
 
-## Prosit
+### Prosit
 Follow to the recommendations on the [Prosit' github webpage](https://github.com/kusterlab/prosit#prosit) or on the [Prosit' webserver](https://www.proteomicsdb.org/prosit/).
 
 ## Postprocess
