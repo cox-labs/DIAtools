@@ -1,0 +1,60 @@
+{
+    "output": {
+        "msmsFile": "<folder>\\msms.txt",
+        "evidenceFile": "<folder>\\evidence.txt",
+        "peptidesFile": "<folder>\\peptides.txt"
+    },
+    "input": {
+        "prosit": {
+            "file": "<folder>\\prosit.output.csv",
+            "columns": {
+                "fragment": {
+                    "intensity": "RelativeIntensity",
+                    "type": "FragmentType",
+                    "number": "FragmentNumber",
+                    "charge": "FragmentCharge"
+                },
+                "peptide": {
+                    "sequence": "LabeledPeptide",
+                    "charge": "PrecursorCharge"
+                }
+            }
+        },
+        "deepmass": {
+
+        },
+        "winner": {
+
+        },
+        "RTprediction": {
+            "evidence": {
+                "file": "???",
+                "columns": {
+                    "sequence": "Sequence",
+                    "retentionTime": "Calibrated retention time"
+                },
+                "minScore": 120
+            },
+            "LSTMconfig": {
+                "splitTrainingSet": true,
+                "percentageTraining": 90,
+                "randomSeed": 42,
+                "modelName": "output",
+                "hyperParameters": {
+                    "batchSize": 40,
+                    "learningRate": 0.00001,
+                    "embeddingInput": 21,
+                    "embeddingOutput": 60,
+                    "dimensionLSTMUnit": 60,
+                    "dropout": 0.4,
+                    "recurrentDropout": 0.01,
+                    "epochs": 100
+                }
+            }
+        },
+        "fastaFiles": [
+            "<folder>\\UP000005640_9606.fasta",
+            "<folder>\\UP000005640_9606_additional.fasta"
+        ]
+    }
+}
