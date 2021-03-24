@@ -24,8 +24,19 @@ python preprocess/main.py prosit preprocess/parameters.json
 | json       | 2.0.9   |
 | re         | 2.2.1   |
 
+## Making prediction
+
+### DeepMass
+Follow to the recommendations on the [DeepMass' github webpage](https://github.com/verilylifesciences/deepmass/tree/main/prism#running-deepmassprism-on-google-cloud-ml).
+
+### WiNNer
+Follow to the recommendations on the [WiNNer' github webpage](https://github.com/cox-labs/wiNNer#winner).
+
+## Prosit
+Follow to the recommendations on the [Prosit' github webpage](https://github.com/kusterlab/prosit#prosit) or on the [Prosit' webserver](https://www.proteomicsdb.org/prosit/).
+
 ## Postprocess
-Taking predicted MSMS spectrum, this scripts generates evidence/msms/peptide files, that are necessary to run MaxDIA.
+Taking predicted MSMS spectrum, this scripts generates evidence/msms/peptide files, that are necessary to run MaxD  IA.
 Additionally to the data integration, it allows to predict Retention Time using training dataset.
 ```
 python postprocess/main.py deepmass postprocess/parameters.json
