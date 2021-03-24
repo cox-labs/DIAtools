@@ -48,4 +48,10 @@ python postprocess/main.py prosit postprocess/parameters.json
 ### Dependencies
 | Package    | Version |
 |:---------- |:------- |
-
+| argparse   | 1.1     |
+| json       | 2.0.9   |
+| numpy      | 1.17.2  |
+| scipy      | 1.3.1   |
+| tensorflow | 1.7.0   |
+| keras      | 2.1.5   |
+| protobuf   | 3.10.0  |
