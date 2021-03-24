@@ -1,0 +1,36 @@
+{
+    "output": {
+        "file": "<folder>\\output.csv"
+    },
+    "input": {
+        "prosit": {
+            "collisionEnergy": 32
+        },
+        "deepmass": {
+            "fragmentation": "HCD",
+            "massAnalyzer": "FTMS"
+        },
+        "winner": {
+            "fragmentation": "HCD",
+            "massAnalyzer": "FTMS"
+        },
+        "fastaFiles": [
+            "<folder>\\UP000005640_9606.fasta",
+            "<folder>\\UP000005640_9606_additional.fasta"
+        ],
+        "fastaIdParseRule": ">.*\\|(.*)\\|",
+        "proteaseParseRule": "(?=([RK].))",
+        "length": {
+            "min": 8,
+            "max": 30
+        },
+        "charge": {
+            "min": 2,
+            "max": 3
+        },
+        "missedCleavage": {
+            "min": 0,
+            "max": 1
+        }
+    }
+}
