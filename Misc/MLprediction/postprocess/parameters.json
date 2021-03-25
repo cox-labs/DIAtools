@@ -2,33 +2,45 @@
     "output": {
         "msmsFile": "<folder>\\msms.txt",
         "evidenceFile": "<folder>\\evidence.txt",
-        "peptidesFile": "<folder>\\peptides.txt"
+        "peptidesFile": "<folder>\\peptides.txt",
+        "tmpFolder": "temp"
     },
     "input": {
-        "prosit": {
-            "file": "<folder>\\prosit.output.csv",
-            "columns": {
-                "fragment": {
+        "file": "<folder>\\output.csv",
+        "fragmentation": "HCD",
+        "massAnalyzer": "FTMS",
+        "predictors": {
+            "deepmass": {
+                "columns": {
+                    "sequence": "ModifiedSequence",
+                    "charge": "Charge",
+                    "intensity": "FragmentIntensities",
+                    "type": "FragmentIons"
+                }
+            },
+            "winner": {
+                "columns": {
+                    "sequence": "Sequence",
+                    "charge": "Charge",
+                    "fragmentIntensities": "FragmentIntensities",
+                    "fragmentIons": "FragmentIons"
+                }
+            },
+            "prosit": {
+                "columns": {
+                    "sequence": "StrippedPeptide",
+                    "charge": "PrecursorCharge",
                     "intensity": "RelativeIntensity",
                     "type": "FragmentType",
-                    "number": "FragmentNumber",
-                    "charge": "FragmentCharge"
-                },
-                "peptide": {
-                    "sequence": "LabeledPeptide",
-                    "charge": "PrecursorCharge"
+                    "number": "FragmentNumber"
                 }
             }
         },
-        "deepmass": {
-
-        },
-        "winner": {
-
-        },
         "RTprediction": {
             "evidence": {
-                "file": "???",
+                "trainingFiles": [
+                    "???"
+                ],
                 "columns": {
                     "sequence": "Sequence",
                     "retentionTime": "Calibrated retention time"
@@ -36,10 +48,8 @@
                 "minScore": 120
             },
             "LSTMconfig": {
-                "splitTrainingSet": true,
                 "percentageTraining": 90,
                 "randomSeed": 42,
-                "modelName": "output",
                 "hyperParameters": {
                     "batchSize": 40,
                     "learningRate": 0.00001,
@@ -52,9 +62,21 @@
                 }
             }
         },
-        "fastaFiles": [
-            "<folder>\\UP000005640_9606.fasta",
-            "<folder>\\UP000005640_9606_additional.fasta"
-        ]
+        "fasta": {
+            "files": [
+                "<folder>\\UP000005640_9606.fasta",
+                "<folder>\\UP000005640_9606_additional.fasta"
+            ],
+            "idParseRule": ">.*\\|(.*)\\|",
+            "proteaseParseRule": "(?=([RK].))",
+            "length": {
+                "min": 8,
+                "max": 30
+            },
+            "missedCleavage": {
+                "min": 0,
+                "max": 1
+            }
+        }
     }
 }
